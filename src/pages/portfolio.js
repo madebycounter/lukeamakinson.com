@@ -8,7 +8,7 @@ import { Content } from "../components/Content";
 
 const PortfolioPage = () => {
     return (
-        <ThemeProvider theme={PrimaryTheme}>
+        <ThemeProvider theme={PrimaryTheme()}>
             <GlobalStyle />
 
             <Content>

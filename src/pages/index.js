@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
-import { PrimaryTheme } from "../global/themes";
+import { PrimaryTheme, WHITE } from "../global/themes";
 import { Title, Navlink } from "../global/typography";
 import { GlobalStyle } from "../global/styles";
 import Header from "../global/header";
@@ -68,7 +68,7 @@ const Navigator = styled.div`
 
 const IndexPage = () => {
     return (
-        <ThemeProvider theme={PrimaryTheme}>
+        <ThemeProvider theme={PrimaryTheme()}>
             <GlobalStyle />
 
             <Jumbotron>
