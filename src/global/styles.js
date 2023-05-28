@@ -23,5 +23,7 @@ export const GlobalStyle = createGlobalStyle`
     * {
         color: ${(props) => props.theme.foreground};
         background-color: ${(props) => props.theme.background};
+        margin: 0;
+        padding: 0;
     }
 `;
