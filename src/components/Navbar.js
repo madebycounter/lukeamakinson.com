@@ -3,10 +3,16 @@ import styled from "styled-components";
 import { Navlink } from "../global/typography";
 
 const StyledNavbar = styled.div`
+    --nav-size: min(3rem, 8vw);
+
     display: flex;
-    gap: 1.4rem;
+    gap: calc(0.47 * var(--nav-size));
     justify-content: center;
     width: 100%;
+
+    a {
+        --size: var(--nav-size);
+    }
 `;
 
 const Navbar = ({ active }) => {
