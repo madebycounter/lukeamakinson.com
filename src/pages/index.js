@@ -80,15 +80,35 @@ const IndexPage = () => {
                     </Title>
 
                     <Navigator>
-                        <Navlink className="red" to="/portfolio">
-                            PORTFOLIO
-                        </Navlink>
-                        <Navlink className="green" to="/about">
-                            ABOUT
-                        </Navlink>
-                        <Navlink className="blue" to="/blog">
-                            BLOG
-                        </Navlink>
+                        <div>
+                            <Navlink
+                                color={PrimaryTheme.colors.red}
+                                className="red"
+                                to="/portfolio"
+                            >
+                                PORTFOLIO
+                            </Navlink>
+                        </div>
+
+                        <div>
+                            <Navlink
+                                color={PrimaryTheme.colors.green}
+                                className="green"
+                                to="/about"
+                            >
+                                ABOUT
+                            </Navlink>
+                        </div>
+
+                        <div>
+                            <Navlink
+                                color={PrimaryTheme.colors.blue}
+                                className="blue"
+                                to="/blog"
+                            >
+                                BLOG
+                            </Navlink>
+                        </div>
                     </Navigator>
                 </div>
             </Jumbotron>
