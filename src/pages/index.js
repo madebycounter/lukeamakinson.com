@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
-import { PrimaryTheme, WHITE } from "../global/themes";
+import { PrimaryTheme } from "../global/themes";
 import { Title, Navlink } from "../global/typography";
 import { GlobalStyle } from "../global/styles";
 import Header from "../global/header";
@@ -82,7 +82,7 @@ const IndexPage = () => {
                     <Navigator>
                         <div>
                             <Navlink
-                                color={PrimaryTheme.colors.red}
+                                color={PrimaryTheme().colors.red}
                                 className="red"
                                 to="/portfolio"
                             >
@@ -92,7 +92,7 @@ const IndexPage = () => {
 
                         <div>
                             <Navlink
-                                color={PrimaryTheme.colors.green}
+                                color={PrimaryTheme().colors.green}
                                 className="green"
                                 to="/about"
                             >
@@ -102,7 +102,7 @@ const IndexPage = () => {
 
                         <div>
                             <Navlink
-                                color={PrimaryTheme.colors.blue}
+                                color={PrimaryTheme().colors.blue}
                                 className="blue"
                                 to="/blog"
                             >

@@ -49,3 +49,10 @@ Navlink.defaultProps = {
     underline: true,
     color: null,
 };
+
+export const Paragraph = styled.p`
+    --size: 1.6rem;
+    font-family: ${(props) => props.theme.bodyFont};
+    font-size: var(--size);
+    line-height: calc(1.3 * var(--size));
+`;
