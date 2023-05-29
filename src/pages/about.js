@@ -11,22 +11,16 @@ import richTextOptions from "../global/richTextOptions";
 import Media from "../components/Media";
 
 const StyledContent = styled.div`
-    * {
-        margin: 1rem 0;
-    }
-
     h1 {
-        margin: 1rem 0;
-
         --size: 9.5rem;
 
         @media (max-width: 840px) {
+            --size: 18vw;
+        }
+
+        @media (max-width: 280px) {
             --size: 17vw;
         }
-    }
-
-    p {
-        --size: min(1.6rem, 6vw);
     }
 
     .media {
@@ -38,8 +32,8 @@ const StyledContent = styled.div`
 const Banner = styled.div`
     width: 50%;
     margin: auto;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
+    margin-bottom: var(--margin);
+    margin-top: var(--margin);
 
     @media (max-width: 840px) {
         width: 60%;

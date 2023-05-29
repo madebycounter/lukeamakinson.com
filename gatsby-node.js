@@ -17,6 +17,14 @@ exports.createSchemaCustomization = ({ actions }) => {
             slug: String!
         }
 
+        type ContentfulBlogPost implements Node {
+            title: String!
+            createdAt: Date! @dateformat
+            tags: [String]
+            slug: String!
+            content: ContentfulRichText
+        }
+
         type ContentfulRichText implements Node {
             raw: String!
         }

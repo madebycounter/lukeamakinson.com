@@ -3,13 +3,13 @@ import styled from "styled-components";
 import { Navlink } from "../global/typography";
 
 const StyledNavbar = styled.div`
-    --nav-size: min(3rem, 8vw);
+    --nav-size: min(3rem, 8.8vw);
 
     display: flex;
     gap: calc(0.47 * var(--nav-size));
     justify-content: center;
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 
     a {
         --size: var(--nav-size);

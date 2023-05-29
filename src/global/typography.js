@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 
 export const Title = styled.h1`
-    --size: 4rem;
+    --size: min(4rem, 12vw);
     font-family: ${(props) => props.theme.titleFont};
     color: ${(props) => props.theme.foreground};
     font-weight: 400;
@@ -51,7 +51,7 @@ Navlink.defaultProps = {
 };
 
 export const Paragraph = styled.p`
-    --size: 1.6rem;
+    --size: min(1.6rem, 6vw);
     font-family: ${(props) => props.theme.bodyFont};
     font-size: var(--size);
     line-height: calc(1.3 * var(--size));
