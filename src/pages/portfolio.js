@@ -6,7 +6,6 @@ import Header from "../global/header";
 import Navbar from "../components/Navbar";
 import Content from "../components/Content";
 import Box from "../components/Box";
-import { Paragraph, Title } from "../global/typography";
 
 const PortfolioContent = styled(Content)`
     h1 {
@@ -22,16 +21,16 @@ const PortfolioPage = () => {
             <PortfolioContent>
                 <Navbar active="portfolio" />
 
-                <Title>Featured</Title>
+                <h1>Featured</h1>
 
                 <Box>
-                    <Paragraph>Hello, world!</Paragraph>
+                    <p>Hello, world!</p>
                 </Box>
 
-                <Title>Recent</Title>
+                <h1>Recent</h1>
 
                 <Box>
-                    <Paragraph>Hello, world!</Paragraph>
+                    <p>Hello, world!</p>
                 </Box>
             </PortfolioContent>
         </ThemeProvider>

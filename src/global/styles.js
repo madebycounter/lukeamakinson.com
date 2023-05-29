@@ -27,15 +27,52 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     :root {
-        --margin: 2rem;
+        --margin: 1rem;
 
-        @media (max-width: 840px) {
-            --margin: 1rem;
+        --fs-sm: 1rem;
+        --fs-md: 1.4rem;
+        --fs-lg: 1.7rem;
+        --fs-xl: 2.2rem;
+
+        @media (min-width: 550px) {
+            --fs-sm: 1.2rem;
+            --fs-md: 1.7rem;
+            --fs-lg: 2.4rem;
+            --fs-xl: 3.8rem;
+        }
+        
+        @media (min-width: 670px) {
+            --fs-sm: 1.5rem;
         }
     }
 
-
-    h1, h2, h3, p {
+    h1, h2, h3 {
+        font-family: ${(props) => props.theme.titleFont};
         margin: var(--margin) 0;
+    }
+
+    h1 {
+        font-size: var(--fs-xl);
+    }
+
+    h2 {
+        font-size: var(--fs-lg);
+    }
+
+    h3 {
+        font-size: var(--fs-md);
+    }
+
+    p {
+        font-size: var(--fs-sm);
+        font-family: ${(props) => props.theme.bodyFont};
+        margin: var(--margin) 0;
+    }
+
+    a {
+        color: ${(props) => props.theme.alternate};
+        text-decoration: none;
+        font-family: ${(props) => props.theme.bodyFont};
+        font-size: var(--fs-sm);
     }
 `;

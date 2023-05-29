@@ -1,9 +1,19 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { PrimaryTheme } from "../global/themes";
-import { Title, Navlink } from "../global/typography";
 import { GlobalStyle } from "../global/styles";
 import Header from "../global/header";
+import { Navlink } from "../components/Navbar";
+
+export const Title = styled.h1`
+    --size: 18vw;
+    font-family: ${(props) => props.theme.titleFont};
+    color: ${(props) => props.theme.foreground};
+    font-weight: 400;
+    font-size: var(--size);
+    line-height: calc(0.87 * var(--size));
+    letter-spacing: calc(0.00625 * var(--size) * -1);
+`;
 
 const Jumbotron = styled.div`
     height: 100vh;
@@ -14,10 +24,6 @@ const Jumbotron = styled.div`
     > .title {
         margin: 2rem;
         grid-area: title;
-
-        > h1 {
-            --size: 18vw;
-        }
     }
 
     @media (max-width: 1000px) {

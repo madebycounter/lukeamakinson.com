@@ -60,7 +60,7 @@ const BlogTitle = styled.h1`
     font-weight: 400;
     font-size: var(--size);
     line-height: calc(0.87 * var(--size));
-    margin: 0;
+    margin-bottom: 0;
 `;
 
 const BlogSubtitle = styled.h2`
@@ -73,18 +73,14 @@ const BlogSubtitle = styled.h2`
     margin-top: 0;
 `;
 
-const StyledBlogPost = styled(Box)`
-    margin: var(--margin) 0;
-`;
-
 const BlogPost = ({ title, timestamp, content }) => {
     return (
-        <StyledBlogPost>
+        <Box>
             <BlogTitle>{title}</BlogTitle>
             <BlogSubtitle>{timestamp}</BlogSubtitle>
 
             <div>{renderRichText(content, richTextOptions)}</div>
-        </StyledBlogPost>
+        </Box>
     );
 };
 

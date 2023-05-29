@@ -10,8 +10,8 @@ const Box = styled.div`
 
     border: var(--size) solid ${(props) => props.theme.alternate};
     border-radius: var(--size);
-    padding: var(--gap);
-    margin: 0;
+    padding: 0 var(--margin);
+    margin: var(--margin) 0;
 `;
 
 export default Box;

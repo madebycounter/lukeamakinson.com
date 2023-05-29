@@ -1,6 +1,44 @@
 import React from "react";
 import styled from "styled-components";
-import { Navlink } from "../global/typography";
+import { Link } from "gatsby";
+
+export const Navlink = styled(Link)`
+    --size: 3rem;
+    font-family: ${(props) => props.theme.navFont};
+    color: ${(props) => props.color || props.theme.foreground};
+    font-weight: 400;
+    font-size: var(--size);
+    text-decoration: none;
+    position: relative;
+
+    &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: calc(0.08 * var(--size));
+        bottom: calc(0.1 * var(--size) * 1);
+        left: 0px;
+        transition: transform 100ms ease;
+        z-index: 1;
+
+        background-color: ${(props) => props.color || props.theme.foreground};
+    }
+
+    &:not(.active):before {
+        transform: scaleX(0);
+    }
+
+    &:hover::before,
+    &:focus::before {
+        ${(props) => props.underline && `transform: scaleX(1);`}
+        ${(props) => props.underline && `border: none;`}
+    }
+`;
+
+Navlink.defaultProps = {
+    underline: true,
+    color: null,
+};
 
 const StyledNavbar = styled.div`
     --nav-size: min(3rem, 8.8vw);
