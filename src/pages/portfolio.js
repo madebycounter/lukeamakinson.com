@@ -80,7 +80,7 @@ const PortfolioItem = ({ title, slug, clickable, thumbnail, aspectRatio }) => {
 
 const PortfolioPage = () => {
     const [state, setState] = useState({
-        width: window.innerWidth,
+        width: 0,
     });
     const { pinned, recent } = useStaticQuery(graphql`
         {
@@ -137,6 +137,7 @@ const PortfolioPage = () => {
 
     useEffect(() => {
         window.addEventListener("resize", updateWidth);
+        updateWidth();
 
         return () => {
             window.removeEventListener("resize", updateWidth);
