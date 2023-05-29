@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-export const Content = styled.div`
+const Content = styled.div`
     --gap: 1rem;
 
     margin: auto;
@@ -9,3 +9,5 @@ export const Content = styled.div`
     padding: var(--gap);
     width: calc(100% - (2 * var(--gap)));
 `;
+
+export default Content;

@@ -4,7 +4,9 @@ import { PrimaryTheme, RED } from "../global/themes";
 import { GlobalStyle } from "../global/styles";
 import Header from "../global/header";
 import Navbar from "../components/Navbar";
-import { Content } from "../components/Content";
+import Content from "../components/Content";
+import Box from "../components/Box";
+import { Title } from "../global/typography";
 
 const PortfolioPage = () => {
     return (
@@ -13,6 +15,10 @@ const PortfolioPage = () => {
 
             <Content>
                 <Navbar active="portfolio" />
+
+                <Box>
+                    <Title>Hello, world!</Title>
+                </Box>
             </Content>
         </ThemeProvider>
     );

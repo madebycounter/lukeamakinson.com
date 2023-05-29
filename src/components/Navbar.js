@@ -9,6 +9,7 @@ const StyledNavbar = styled.div`
     gap: calc(0.47 * var(--nav-size));
     justify-content: center;
     width: 100%;
+    margin-bottom: 1rem;
 
     a {
         --size: var(--nav-size);

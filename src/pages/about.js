@@ -4,10 +4,10 @@ import { GREEN, PrimaryTheme } from "../global/themes";
 import { GlobalStyle } from "../global/styles";
 import Header from "../global/header";
 import Navbar from "../components/Navbar";
-import { Content } from "../components/Content";
+import Content from "../components/Content";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { useStaticQuery, graphql } from "gatsby";
-import richTextOptions from "./richTextOptions";
+import richTextOptions from "../global/richTextOptions";
 import Media from "../components/Media";
 
 const StyledContent = styled.div`

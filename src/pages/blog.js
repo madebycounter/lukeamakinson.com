@@ -4,7 +4,7 @@ import { BLUE, PrimaryTheme } from "../global/themes";
 import { GlobalStyle } from "../global/styles";
 import Header from "../global/header";
 import Navbar from "../components/Navbar";
-import { Content } from "../components/Content";
+import Content from "../components/Content";
 
 const BlogPage = () => {
     return (

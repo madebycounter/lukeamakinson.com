@@ -1,7 +1,7 @@
 import React from "react";
 import { BLOCKS } from "@contentful/rich-text-types";
 import Media from "../components/Media";
-import { Paragraph, Title } from "../global/typography";
+import { Paragraph, Title } from "./typography";
 
 const richTextOptions = {
     renderNode: {
