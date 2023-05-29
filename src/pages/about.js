@@ -9,6 +9,7 @@ import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { useStaticQuery, graphql } from "gatsby";
 import richTextOptions from "../global/richTextOptions";
 import Media from "../components/Media";
+import { Link } from "gatsby";
 
 const StyledContent = styled.div`
     h1 {
@@ -27,6 +28,9 @@ const StyledContent = styled.div`
         width: 60%;
         margin: auto;
     }
+
+    max-width: 800px;
+    margin: auto;
 `;
 
 const Banner = styled.div`
@@ -37,6 +41,15 @@ const Banner = styled.div`
 
     @media (max-width: 840px) {
         width: 60%;
+    }
+`;
+
+const Title = styled.h1`
+    text-align: center;
+    font-size: 8rem;
+
+    @media (max-width: 850px) {
+        font-size: 15vw;
     }
 `;
 
@@ -84,10 +97,13 @@ const AboutPage = () => {
                 <Navbar active="about" />
 
                 <Banner>
-                    <Media src={banner} />
+                    <Link to="/">
+                        <Media src={banner} />
+                    </Link>
                 </Banner>
 
                 <StyledContent>
+                    <Title>Hi, J'm Luke.</Title>
                     {renderRichText(pageContent.content, richTextOptions)}
                 </StyledContent>
             </Content>

@@ -6,23 +6,22 @@ exports.createSchemaCustomization = ({ actions }) => {
             content: ContentfulRichText
         }
 
-        type ContentfulMedia implements Node {
-            title: String!
-            content: [ContentfulAsset]
-            isVideo: Boolean!
-            autoplay: Boolean!
-            autoplayDelay: Int!
-            autoplayOffset: Int!
-            maxWidth: Int
-            slug: String!
-        }
-
         type ContentfulBlogPost implements Node {
             title: String!
             createdAt: Date! @dateformat
             tags: [String]
             slug: String!
             content: ContentfulRichText
+        }
+
+        type ContentfulPortfolioItem implements Node {
+            title: String!
+            date: Date! @dateformat
+            aspectRatio: Float!
+            pageContent: ContentfulPageContent
+            pinned: Boolean!
+            clickable: Boolean!
+            slug: String!
         }
 
         type ContentfulRichText implements Node {
