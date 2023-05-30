@@ -1,8 +1,8 @@
 import { createGlobalStyle } from "styled-components";
 
-import EckmannWoff from "../fonts/ECKMANN.woff";
-import EckmannWoff2 from "../fonts/ECKMANN.woff2";
-import EckmannTTF from "../fonts/ECKMANN.ttf";
+import EckmannWoff from "../fonts/Eckmann.woff";
+import EckmannWoff2 from "../fonts/Eckmann.woff2";
+import EckmannTTF from "../fonts/Eckmann.ttf";
 import BusoramaWoff from "../fonts/BusoramaITCbyBT-Bold.woff";
 import BusoramaWoff2 from "../fonts/BusoramaITCbyBT-Bold.woff2";
 import BusoramaTTF from "../fonts/BusoramaITCbyBT-Bold.ttf";
