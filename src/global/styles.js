@@ -1,22 +1,27 @@
 import { createGlobalStyle } from "styled-components";
 
 import EckmannWoff from "../fonts/ECKMANN.woff";
-import ITCBusoramaBoldWoff from "../fonts/ITC Busorama Bold.woff";
-import ITCBusoramaBoldWoff2 from "../fonts/ITC Busorama Bold.woff2";
+import EckmannWoff2 from "../fonts/ECKMANN.woff2";
+import EckmannTTF from "../fonts/ECKMANN.ttf";
+import BusoramaWoff from "../fonts/BusoramaITCbyBT-Bold.woff";
+import BusoramaWoff2 from "../fonts/BusoramaITCbyBT-Bold.woff2";
+import BusoramaTTF from "../fonts/BusoramaITCbyBT-Bold.ttf";
 
 export const GlobalStyle = createGlobalStyle`
     @font-face {
-        font-family: "ECKMANN";
-        src: url(${EckmannWoff}) format("woff");
-        font-weight: 400;
+        font-family: "Eckmann";
+        src: url(${EckmannWoff2}) format('woff2'), url(${EckmannWoff}) format('woff'), url(${EckmannTTF}) format('truetype');
+        font-weight: normal;
         font-style: normal;
+        font-display: swap;
     }
 
     @font-face {
-        font-family: "ITC Busorama Bold";
-        src: url(${ITCBusoramaBoldWoff2}) format("woff2"), url(${ITCBusoramaBoldWoff}) format("woff");
-        font-weight: 400;
+        font-family: "ITC Busorama";
+        src: url(${BusoramaWoff2}) format('woff2'), url(${BusoramaWoff}) format('woff'), url(${BusoramaTTF}) format('truetype');
+        font-weight: bold;
         font-style: normal;
+        font-display: swap;
     }
 
     * {

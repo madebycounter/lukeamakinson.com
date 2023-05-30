@@ -5,8 +5,8 @@ export const GREEN = "#648249";
 export const BLUE = "#495e82";
 
 export const PrimaryTheme = (alt) => ({
-    navFont: "ITC Busorama Bold",
-    titleFont: "ECKMANN",
+    navFont: "ITC Busorama",
+    titleFont: "Eckmann",
     bodyFont: "Times New Roman",
 
     background: BLACK,
