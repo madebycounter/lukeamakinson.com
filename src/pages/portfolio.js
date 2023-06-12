@@ -82,6 +82,7 @@ const PortfolioPage = () => {
     const [state, setState] = useState({
         width: 0,
     });
+
     const { pinned, recent } = useStaticQuery(graphql`
         {
             pinned: allContentfulPortfolioItem(
@@ -142,7 +143,7 @@ const PortfolioPage = () => {
         return () => {
             window.removeEventListener("resize", updateWidth);
         };
-    });
+    }, []);
 
     return (
         <ThemeProvider theme={PrimaryTheme(RED)}>

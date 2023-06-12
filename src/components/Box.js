@@ -2,16 +2,17 @@ import React from "react";
 import styled from "styled-components";
 
 const Box = styled.div`
-    --size: 8px;
+    --size: 12px;
 
     @media (max-width: 840px) {
-        --size: 6px;
+        --size: 10px;
     }
 
-    border: var(--size) solid ${(props) => props.theme.alternate};
+    border: 1px solid transparent;
+    box-shadow: 0 0 0 var(--size) ${(props) => props.theme.alternate};
     border-radius: var(--size);
     padding: 0 var(--margin);
-    margin: var(--margin) 0;
+    margin: calc(var(--margin) + (var(--size) * 2)) 0;
 `;
 
 export default Box;

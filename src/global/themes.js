@@ -1,5 +1,5 @@
 export const BLACK = "#121210";
-export const WHITE = "#f0f0f0";
+export const WHITE = "#f9f6ee";
 export const RED = "#824949";
 export const GREEN = "#648249";
 export const BLUE = "#495e82";

@@ -34,7 +34,7 @@ export const GlobalStyle = createGlobalStyle`
     :root {
         --margin: 1rem;
 
-        --fs-sm: 1rem;
+        --fs-sm: 1.2rem;
         --fs-md: 1.4rem;
         --fs-lg: 1.7rem;
         --fs-xl: 2.2rem;

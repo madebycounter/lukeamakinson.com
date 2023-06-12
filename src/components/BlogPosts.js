@@ -11,7 +11,7 @@ export const useBlogPosts = (filter) => {
             blogPosts: allContentfulBlogPost(sort: { createdAt: DESC }) {
                 nodes {
                     title
-                    createdAt(formatString: "D/M/YY @ h:m A")
+                    date(formatString: "M/D/YY @ h:mm A")
                     tags
                     slug
                     content {
@@ -50,7 +50,9 @@ export const useBlogPosts = (filter) => {
         };
 
     return {
-        blogPosts: blogPosts.nodes.filter((post) => post.tags.includes(filter)),
+        blogPosts: blogPosts.nodes.filter((post) =>
+            (post.tags || []).includes(filter)
+        ),
         tags,
     };
 };
@@ -62,7 +64,7 @@ const BlogTitle = styled.h1`
     font-weight: 400;
     font-size: var(--size);
     line-height: calc(0.87 * var(--size));
-    margin-bottom: 0;
+    margin-bottom: 0.3rem;
 `;
 
 const BlogSubtitle = styled.h2`
@@ -93,7 +95,7 @@ const BlogPosts = ({ blogPosts }) => {
                 <BlogPost
                     key={post.slug}
                     title={post.title}
-                    timestamp={post.createdAt}
+                    timestamp={post.date}
                     content={post.content}
                 />
             ))}
