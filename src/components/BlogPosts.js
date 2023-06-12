@@ -36,9 +36,11 @@ export const useBlogPosts = (filter) => {
     var tags = [];
 
     blogPosts.nodes.forEach((post) => {
-        post.tags.forEach((tag) => {
-            if (!tags.includes(tag)) tags.push(tag);
-        });
+        if (post.tags) {
+            post.tags.forEach((tag) => {
+                if (!tags.includes(tag)) tags.push(tag);
+            });
+        }
     });
 
     if (!filter)
