@@ -33,9 +33,14 @@ const PortfolioBox = styled(Box)`
     }
 `;
 
+const RecentBox = styled(Box)`
+    margin-top: 0;
+`;
+
 const PortfolioContent = styled(Content)`
     h1 {
-        margin-bottom: 0;
+        margin-bottom: 0.3rem;
+        font-weight: 400;
     }
 `;
 
@@ -169,7 +174,7 @@ const PortfolioPage = () => {
 
                 <h1>Recent</h1>
 
-                <Box>
+                <RecentBox>
                     <Gallery
                         components={recent.nodes.map((node, idx) => (
                             <PortfolioItem
@@ -182,7 +187,7 @@ const PortfolioPage = () => {
                         ))}
                         columns={state.width > 650 ? 3 : 1}
                     />
-                </Box>
+                </RecentBox>
             </PortfolioContent>
         </ThemeProvider>
     );
